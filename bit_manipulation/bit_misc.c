@@ -4,8 +4,9 @@
 // File:     /Users/alexandretea/Work/concepts/bit_manipulation/bit_misc.c
 // Purpose:  TODO (a one-line explanation)
 // Created:  2017-06-05 15:09:18
-// Modified: 2017-06-05 16:44:40
+// Modified: 2017-06-19 14:40:35
 
+#include <stddef.h>
 #include "bit.h"
 
 static void // debug
@@ -30,4 +31,16 @@ copy_bits(int dest, int src, int idx_start, int idx_end)
     // copy src bits through mask
     src <<= idx_start;
     return (dest & mask) | src;
+}
+
+unsigned int
+count_set_bits(int nb)
+{
+    unsigned int count = 0;
+
+    while (nb) {
+        nb = nb & (nb - 1); // clear LSB
+        ++count;
+    }
+    return count;
 }

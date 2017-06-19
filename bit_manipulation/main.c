@@ -4,7 +4,7 @@
 // File:     /Users/alexandretea/Work/concepts/bit_manipulation/main.c
 // Purpose:  TODO (a one-line explanation)
 // Created:  2017-06-05 14:52:18
-// Modified: 2017-06-05 16:25:47
+// Modified: 2017-06-19 14:40:59
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -61,5 +61,10 @@ main(int argc               __attribute__ ((unused)),
     printf("copy 0b10011 into var at index 2\n");
     debug_var(a);
     printf("\n");
+
+    printf("--\n");
+    a = 0b100111001100;
+    debug_var(a);
+    printf("count nb of set bits in var: %u\n", count_set_bits(a));
     return EXIT_SUCCESS;
 }
