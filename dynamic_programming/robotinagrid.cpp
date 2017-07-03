@@ -4,7 +4,7 @@
 // File:     /Users/alexandretea/Work/concepts/dynamic_programming/robotinagrid.cpp
 // Purpose:  TODO (a one-line explanation)
 // Created:  2017-07-03 15:00:16
-// Modified: 2017-07-03 16:04:09
+// Modified: 2017-07-03 16:05:12
 
 #include <vector>
 #include <cstdlib>
@@ -13,6 +13,7 @@
 
 // robot can only move to the right or to the bottom
 // starts at 0,0 and needs to find a path to the bottom-right corner
+// O(hw) with h and w being the height and width of the grid
 
 struct Coordinates
 {
